@@ -7,6 +7,7 @@
 * 3. Criando um Contrato Inteligente
 * 4. Referências e API's
 
+
 ### 1. Introdução
 
 Ethereum é uma plataforma descentralizada que utiliza a tecnologia blockchain, seu projeto possui código aberto
@@ -31,6 +32,7 @@ fornecedor e ainda pesquisar por produtos mais baratos.
 Os contratos são desenvolvidos em linguagens de alto nível criadas pela própria Ethereum, usaremos aqui a Solidity uma
 linguagem orientada a objetos parecida com o JavaScript, contratos criados em solidity possuem a extensão .sol nome.
 
+
 ### 2. Instalação
 
 Para começar a programar em Solidity é necessário apenas acesso a internet pois usaremos um compilador online
@@ -44,7 +46,7 @@ Ou se preferir acesse o site do [compilador online em tempo real](https://remix.
 Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
     ```
     npm install -g solc
-    ``` 
+    ```
 
 ### 3. Criando um Contrato Inteligente
 
@@ -94,10 +96,71 @@ no compilador uma nova palavra entre aspas duplas e clique em setPalavra, no log
 e o novo conteúdo da variável. Os getters, métodos que possuem get na frente do nome retornam o valor de uma variável
 sem modifica-la e necessitam da palavra "constant" para serem definidos.
 
-Agora que você já está familiarizado com a linguagem e ambiente vamos criar um contrato que funciona como uma conta
-de banco.
+Agora que você já está familiarizado com a linguagem e ambiente vamos criar um simples contrato que funciona como uma
+conta de banco.
 
+Precisaremos de uma função para depositar fundos nessa conta que terá acesso público, pois qualquer um pode depositar,
+um método getter para verificar quanto tem na conta e eventos que indicam as transações feitas. Para começar criamos
+uma variavel cliente ```address cliente``` address é um tipo de 20 bytes que não suporta operação aritmeticas e guarda
+endereço Ethereum de alguem. Também foi criado um construtor que instancia essa variavel com a identificação do dono
+da conta:
 
+    function ContratoConta() public {
+       cliente = msg.sender;
+    }
 
+Para depositar vamos precisar de um tipo de função especial chamada "payable" que movimenta o ether, combustivel da
+plataforma Ethereum, a função emite um evento que mostra ao usuário quem depositou e quantia depositada.
 
-### 4.Referências e API's
+    function depositaFundos() payable public{
+       StatusUsuario("Usuario transferiu dinheiro", msg.sender, msg.value);
+    }
+
+Se o cliente quiser verificar a quantidade de dinheiro na conta ele pode usar o método a seguir
+
+    function getFundos() public ifCliente constant returns(uint){
+       return this.balance;
+    }
+ 
+ o ifCliente na declaração da função é um modificador, na linguagem solidity um modificador pode ser usado para
+ verificar uma condição e economizar código
+ 
+    modifier ifCliente() {
+       if(msg.sender != cliente) {
+           throw;
+       }else {
+            _;
+       }
+    }
+
+como muitas funções dentro do código precisam de verificar se o cliente e a pessoa que está executando a função
+possuem o mesmo endereço, basta colocar o nome do modificador na função e ele será chamado.
+
+A próxima função verifica se foi depositado algum dinheiro, se sim executa um evento que atualiza o status, '_switch'
+é uma variável do tipo boolean que auxilia na verificação
+
+    function verificaFundos(uint amount) ifCliente public{
+       if(cliente.send(amount)){
+           AtualizaStatus("Usuario transferiu dinheiro");
+           _switch = true;
+       }else {
+           _switch = false;
+       }
+    }
+
+O código completo pode ser encontrado na pasta contrato dentro do projeto.
+
+No compilador execute o código e no campo "value" digite uma quantia em unidades contidas do sistema métrico do ether
+e utilize o campo "depositaFundos" criado para fazer depósitos.
+
+### 4.Referências e Documentações
+
+Site oficial da [Ethereum](https://www.ethereum.org/)
+
+Documentação [Ethereum](http://www.ethdocs.org/en/latest/index.html)
+
+Documentação [Solidity](https://solidity.readthedocs.io/en/develop/index.html)
+
+[Artigo sobre a tecnologia Ethereum](https://medium.com/@creole/7-a-simple-view-of-ethereum-e276f76c980b)
+
+[Tutorial no youtube de Solidity](https://www.youtube.com/watch?v=R_CiemcFKis&list=PLQeiVDgMaJcWnAZLElXKLZhS5a71Sxzw0)
