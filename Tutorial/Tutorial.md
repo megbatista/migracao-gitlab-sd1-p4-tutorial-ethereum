@@ -29,11 +29,12 @@ para o que está faltando, com um contrato inteligente específico ela pode real
 fornecedor e ainda pesquisar por produtos mais baratos.
 
 Os contratos são desenvolvidos em linguagens de alto nível criadas pela própria Ethereum, usaremos aqui a Solidity uma
-linguagem parecida com o JavaScript.
+linguagem orientada a objetos parecida com o JavaScript, contratos criados em solidity possuem a extensão .sol nome.
 
 ### 2. Instalação
 
-Para começar a programar em Solidity é necessário um compilador:
+Para começar a programar em Solidity é necessário apenas acesso a internet pois usaremos um compilador online
+chamado "remix":
 
 Instale o compilador e a IDE online acessando o [projeto no GitHub](https://github.com/ethereum/browser-solidity)
 do compilador online de Solidity e siga as intruções de instalação.
@@ -47,12 +48,49 @@ Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
 
 ### 3. Criando um Contrato Inteligente
 
-Abra o compilador no navegador e compile o código:
+Abra o compilador e digite o código:
+    ```
+    pragma solidity ^0.4.0;
     
-    contract HelloWorld {
-        event Print(string out);
-        function() { Print("Hello, World!"); }
+    contract OlaMundoContrato {
+        string palavra = "Olá, Mundo";
+        uint valor;
+        
+        event Imprime(string out);
+        function() { Imprime(palavra); }
+        
+        function setPalavra(string novaPalavra) {
+            palavra = novaPalavra;
+        }
+        
+        function getPalavra() returns (string) {
+            return palavra;
+        }
+        
+        function setValor(uint x) {
+            valor = x;
+        }
+    
+        function getValor() constant returns (uint) {
+            return valor;
+        }
     }
-    
-    
+    ```
+A primeira coisa que fazemos é definir a versão da linguagem usada, para isso é usada a palavra 'pragma', pragmas
+são instruções dadas ao compilador para que ele saiba como tratar o código.
+
+Definimos um contrato utilizando a palavra 'contract', criamos uma variável palavra do tipo string  e um evento
+'Imprime' que possui uma saída do tipo string. Dentro de uma função esse evento é chamado e executado. No compilador
+clique na aba 'Run' e no botão 'create' seu contrato será criado. Os métodos criados aparecem no lado direito da tela
+clicando neles você pode mudar ou ver os valores das variáveis.
+
+O tipo uint é um inteiro de 256 bits que só armazena valores inteiros, criamos uma variável valor do tipo uint, que
+pode representar uma quantia de depósito em ether. Depois são definidos métodos de acesso às variáveis esses métodos
+são chamados de getters e setters. Os métodos setValor e setPalavra são usados para mudar o valor da variável, digite
+no campo criado com o nome do método no compilador uma nova palavra entre aspas duplas e clique em setPalavra, no log
+do compilador aparecerá o evento gerado e o novo conteúdo da variável.
+
+Agora que você já está familiarizado com a linguagem e ambiente vamos criar um contrato mais complexo 
+
+
 ### 4.Referências e API's
