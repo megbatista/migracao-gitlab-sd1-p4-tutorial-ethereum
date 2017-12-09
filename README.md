@@ -4,5 +4,5 @@
 
 ## Tutorial
 
-O tutorial se encontra na pasta de mesmo nome e o código com
-o exemplo na pasta contrato
+O tutorial se encontra na pasta **tutorial** e o código com
+o exemplo na pasta **contrato** no diretório do projeto.
