@@ -49,6 +49,7 @@ Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
 ### 3. Criando um Contrato Inteligente
 
 Abra o compilador e digite o código:
+
 ```
 pragma solidity ^0.4.0;
 
@@ -86,10 +87,11 @@ clique na aba 'Run' e no botão 'create' seu contrato será criado. Os métodos 
 clicando neles você pode mudar ou ver os valores das variáveis.
 
 O tipo uint é um inteiro de 256 bits que só armazena valores inteiros, criamos uma variável valor do tipo uint, que
-pode representar uma quantia de depósito em ether. Depois são definidos métodos de acesso às variáveis esses métodos
-são chamados de getters e setters. Os métodos setValor e setPalavra são usados para mudar o valor da variável, digite
-no campo criado com o nome do método no compilador uma nova palavra entre aspas duplas e clique em setPalavra, no log
-do compilador aparecerá o evento gerado e o novo conteúdo da variável.
+pode representar uma quantia de depósito em ether. Depois são definidos métodos de acesso que são usados para evitar
+o acesso público às suas variáveis definindo-as como privadas veremos mais tarde o uso de variáveis públicas e privadas.
+Os métodos setValor e setPalavra são usados para mudar o valor da variável, digite no campo criado com o nome do método
+no compilador uma nova palavra entre aspas duplas e clique em setPalavra, no log do compilador aparecerá o evento gerado
+e o novo conteúdo da variável.
 
 Agora que você já está familiarizado com a linguagem e ambiente vamos criar um contrato mais complexo 
 
