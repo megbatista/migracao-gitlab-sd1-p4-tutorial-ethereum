@@ -1,6 +1,6 @@
-#Tutorial Ethereum
+# Tutorial Ethereum
 
-##Índice
+## Índice
 
 * 1. Introdução
 
@@ -11,18 +11,34 @@
 
 ### 1. Introdução
 
-Ethereum é uma plataforma descentralizada que utiliza a tecnologia blockchain, seu projeto possui código aberto e permite que qualquer pessoa possa desenvolver suas próprias aplicações baseadas em blockchain ou até mesmo criar sua própria cripto-moeda.
+Ethereum é uma plataforma descentralizada que utiliza a tecnologia blockchain, seu projeto possui código aberto
+e permite que qualquer pessoa possa desenvolver suas próprias aplicações baseadas em blockchain ou até mesmo criar
+sua própria cripto-moeda.
 
-Blockchain é um grande banco de dados distribuídos, uma rede onde cada parte conectada executa e grava as mesmas transações dificultando o ataque centralizado e fraudes. Assim como qualquer blockchain a Ethereum possui um protocolo peer-to-peer e é sustentada por vários usuários conectados que possuem a ethereum virtual machine e executam as mesmas instruções.
+A tecnologia blockchain pode ser considerada um grande banco de dados distribuídos, uma rede onde cada parte conectada
+executa e grava as mesmas transações dificultando o ataque centralizado e fraudes. Assim como qualquer blockchain a
+Ethereum possui um protocolo peer-to-peer e é sustentada por vários usuários conectados que possuem a ethereum virtual
+machine e executam as mesmas instruções.
 
 Neste Tutorial vamos aprender a criar um contrato inteligente usando essa tecnologia.
 
-Um contrato inteligente ou smart contract é uma coleção de código programado para executar ações, sem a possibilidade de censura, fraude ou interferência de terceiros.
-Os contratos inteligentes podem ser utilizados para programar e executar ações como: receber e depositar fundos em uma empresa, transferência de dinheiro e vai muito além disso essa tecnologia leva a chamada "internet das coisas" a um outro nível, por exemplo uma empresa que desenvolve sistemas eletrônicos está trabalhando em uma geladeira que cria uma lista de compras para o que está faltando, com um contrato inteligente específico ela pode realizar a compra automaticamente direto no fornecedor e ainda pesquisar por produtos mais baratos.
+Um contrato inteligente ou smart contract é uma coleção de código programado para executar ações, sem a possibilidade de
+censura, fraude ou interferência de terceiros.
+Os contratos inteligentes podem ser utilizados para programar e executar ações como: depositar fundos em uma empresa,
+transferir dinheiro e vai muito além disso essa tecnologia leva a chamada "internet das coisas" a um outro nível, por
+exemplo uma empresa que desenvolve sistemas eletrônicos está trabalhando em uma geladeira que cria uma lista de compras
+para o que está faltando, com um contrato inteligente específico ela pode realizar a compra automaticamente direto no
+fornecedor e ainda pesquisar por produtos mais baratos.
 
-Os contratos são desenvolvidos em linguagens de alto nível criadas pela própria Ethereum, usaremos aqui a Solidity uma linguagem parecida com o JavaScript.
+Os contratos são desenvolvidos em linguagens de alto nível criadas pela própria Ethereum, usaremos aqui a Solidity uma
+linguagem parecida com o JavaScript.
 
 ### 2. Instalação
+
+Para instalar o compilador e a IDE online acesse o [projeto no GitHub](https://github.com/ethereum/browser-solidity)
+do compilador online de Solidity e siga as intruções de instalação.
+
+Ou se preferir acesse o site do [compilador online em tempo real](https://remix.ethereum.org/).
 
 ### 3. Criando um Contrato Inteligente
 
