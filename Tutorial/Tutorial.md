@@ -40,6 +40,12 @@ do compilador online de Solidity e siga as intruções de instalação.
 
 Ou se preferir acesse o site do [compilador online em tempo real](https://remix.ethereum.org/).
 
+Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
+
+´´´
+npm install -g solc
+´´´
+
 ### 3. Criando um Contrato Inteligente
 
     Abra o compilador no navegador e compile o código:
