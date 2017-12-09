@@ -2,11 +2,11 @@
 
 ## Índice
 
-* 1. Introdução
+*  1. Introdução
 
-* 2. Instalação
+*  2. Instalação
 
-* 3. Criando um Contrato Inteligente
+*  3. Criando um Contrato Inteligente
 
 
 ### 1. Introdução
