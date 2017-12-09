@@ -2,12 +2,10 @@
 
 ## Índice
 
-*  1. Introdução
-
-*  2. Instalação
-
-*  3. Criando um Contrato Inteligente
-
+* 1. Introdução
+* 2. Instalação
+* 3. Criando um Contrato Inteligente
+* 4. Referências e API's
 
 ### 1. Introdução
 
@@ -35,11 +33,22 @@ linguagem parecida com o JavaScript.
 
 ### 2. Instalação
 
-Para instalar o compilador e a IDE online acesse o [projeto no GitHub](https://github.com/ethereum/browser-solidity)
+Para começar a programar em Solidity é necessário um compilador:
+
+Instale o compilador e a IDE online acessando o [projeto no GitHub](https://github.com/ethereum/browser-solidity)
 do compilador online de Solidity e siga as intruções de instalação.
 
 Ou se preferir acesse o site do [compilador online em tempo real](https://remix.ethereum.org/).
 
 ### 3. Criando um Contrato Inteligente
 
-
+    Abra o compilador no navegador e compile o código:
+    
+    ´´´
+    contract HelloWorld {
+        event Print(string out);
+        function() { Print("Hello, World!"); }
+    }
+    ´´´
+    
+### 4.Referências e API's
