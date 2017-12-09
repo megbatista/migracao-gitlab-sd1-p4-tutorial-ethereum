@@ -91,9 +91,13 @@ pode representar uma quantia de depósito em ether. Depois são definidos métod
 o acesso público às suas variáveis definindo-as como privadas veremos mais tarde o uso de variáveis públicas e privadas.
 Os métodos setValor e setPalavra são usados para mudar o valor da variável, digite no campo criado com o nome do método
 no compilador uma nova palavra entre aspas duplas e clique em setPalavra, no log do compilador aparecerá o evento gerado
-e o novo conteúdo da variável.
+e o novo conteúdo da variável. Os getters, métodos que possuem get na frente do nome retornam o valor de uma variável
+sem modifica-la e necessitam da palavra "constant" para serem definidos.
 
-Agora que você já está familiarizado com a linguagem e ambiente vamos criar um contrato mais complexo 
+Agora que você já está familiarizado com a linguagem e ambiente vamos criar um contrato que funciona como uma conta
+de banco.
+
+
 
 
 ### 4.Referências e API's
