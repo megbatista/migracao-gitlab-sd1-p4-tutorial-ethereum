@@ -10,16 +10,20 @@
 
 ### 1. Introdução
 
-Ethereum é uma plataforma descentralizada que utiliza a tecnologia blockchain, seu projeto possui código aberto
-e permite que qualquer pessoa possa desenvolver suas próprias aplicações baseadas em blockchain ou até mesmo criar
-sua própria cripto-moeda.
+Ethereum é uma plataforma descentralizada que utiliza a tecnologia blockchain, um projeto de código aberto que começou
+a ser desenvolvido em 2013 e permite que qualquer pessoa possa desenvolver suas próprias aplicações baseadas em
+blockchain. Algumas aplicações dessa tecnologia são: transferências financeiras para qualquer parte do mundo,
+apólices de seguro, coleta de impostos e o desenvolvimento de contratos inteligentes.
 
-A tecnologia blockchain pode ser considerada um grande banco de dados distribuídos, uma rede onde cada parte conectada
-executa e grava as mesmas transações dificultando o ataque centralizado e fraudes. Assim como qualquer blockchain a
-Ethereum possui um protocolo peer-to-peer e é sustentada por vários usuários conectados que possuem a ethereum virtual
-machine e executam as mesmas instruções.
+A tecnologia blockchain surgiu com o bitcoin e pode ser considerada um grande banco de dados distribuídos, uma rede
+onde cada parte conectada executa e grava as mesmas transações, dificultando o ataque centralizado e fraudes. Assim como
+qualquer blockchain a Ethereum possui um protocolo peer-to-peer e é sustentada por vários usuários conectados que possuem
+a ethereum virtual machine e executam as mesmas instruções.
 
-Neste Tutorial vamos aprender a criar um contrato inteligente usando essa tecnologia.
+Tudo que acontece na plataforma é pago em Ether, uma cripto-moeda que funciona como um combustível, a Ethereum não
+considera o Ether concorrente da bitcoin, mas um complemento já que sem ela o Ether nem seria possível.
+
+Neste Tutorial iremos aprender a criar um contrato inteligente usando essa tecnologia.
 
 Um contrato inteligente ou smart contract é uma coleção de código que funciona como um programa de computador programado
 para executar ações, sem a possibilidade de censura, fraude ou interferência de terceiros.
@@ -30,7 +34,7 @@ para o que está faltando, com um contrato inteligente específico ela pode real
 fornecedor e ainda pesquisar por produtos mais baratos.
 
 Os contratos são desenvolvidos em linguagens de alto nível criadas pela própria Ethereum, usaremos aqui a Solidity uma
-linguagem orientada a objetos parecida com o JavaScript, contratos criados em solidity possuem a extensão .sol nome.
+linguagem orientada a objetos parecida com o JavaScript.
 
 
 ### 2. Instalação
@@ -101,7 +105,7 @@ conta de banco.
 
 Precisaremos de uma função para depositar fundos nessa conta que terá acesso público, pois qualquer um pode depositar,
 um método getter para verificar quanto tem na conta e eventos que indicam as transações feitas. Para começar criamos
-uma variavel cliente ```address cliente``` address é um tipo de 20 bytes que não suporta operação aritmeticas e guarda
+uma variável ```address cliente``` address é um tipo de 20 bytes que não suporta operação aritmeticas e guarda
 endereço Ethereum de alguem. Também foi criado um construtor que instancia essa variavel com a identificação do dono
 da conta:
 
@@ -152,6 +156,7 @@ O código completo pode ser encontrado na pasta contrato dentro do projeto.
 
 No compilador execute o código e no campo "value" digite uma quantia em unidades contidas do sistema métrico do ether
 e utilize o campo "depositaFundos" criado para fazer depósitos.
+
 
 ### 4.Referências e Documentações
 
