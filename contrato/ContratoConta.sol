@@ -18,7 +18,7 @@ contract ContratoConta {
        cliente = msg.sender;
    }
    
-   // modificdador usado para reaproveitar codigo
+   // modificador usado para reaproveitar codigo
    modifier ifCliente() {
        if(msg.sender != cliente) {
            throw;
