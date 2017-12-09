@@ -42,19 +42,19 @@ Ou se preferir acesse o site do [compilador online em tempo real](https://remix.
 
 Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
 
-´´´
-npm install -g solc
-´´´
+```
+    npm install -g solc
+``` 
 
 ### 3. Criando um Contrato Inteligente
 
-    Abra o compilador no navegador e compile o código:
+Abra o compilador no navegador e compile o código:
     
-    ´´´
+    ```
     contract HelloWorld {
         event Print(string out);
         function() { Print("Hello, World!"); }
     }
-    ´´´
+    ```
     
 ### 4.Referências e API's
