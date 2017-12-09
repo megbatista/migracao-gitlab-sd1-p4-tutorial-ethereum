@@ -106,7 +106,7 @@ conta de banco.
 Precisaremos de uma função para depositar fundos nessa conta que terá acesso público, pois qualquer um pode depositar,
 um método getter para verificar quanto tem na conta e eventos que indicam as transações feitas. Para começar criamos
 uma variável ```address cliente``` address é um tipo de 20 bytes que não suporta operação aritmeticas e guarda
-endereço Ethereum de alguem. Também foi criado um construtor que instancia essa variavel com a identificação do dono
+endereço Ethereum de um usuário. Também foi criado um construtor que instancia essa variavel com a identificação do dono
 da conta:
 
     function ContratoConta() public {
