@@ -76,6 +76,7 @@ Abra o compilador e digite o código:
         }
     }
     ```
+    
 A primeira coisa que fazemos é definir a versão da linguagem usada, para isso é usada a palavra 'pragma', pragmas
 são instruções dadas ao compilador para que ele saiba como tratar o código.
 
