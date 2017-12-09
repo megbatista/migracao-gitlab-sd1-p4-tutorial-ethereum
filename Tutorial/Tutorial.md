@@ -20,8 +20,8 @@ machine e executam as mesmas instruções.
 
 Neste Tutorial vamos aprender a criar um contrato inteligente usando essa tecnologia.
 
-Um contrato inteligente ou smart contract é uma coleção de código programado para executar ações, sem a possibilidade de
-censura, fraude ou interferência de terceiros.
+Um contrato inteligente ou smart contract é uma coleção de código que funciona como um programa de computador programado
+para executar ações, sem a possibilidade de censura, fraude ou interferência de terceiros.
 Os contratos inteligentes podem ser utilizados para programar e executar ações como: depositar fundos em uma empresa,
 transferir dinheiro e vai muito além disso essa tecnologia leva a chamada "internet das coisas" a um outro nível, por
 exemplo uma empresa que desenvolve sistemas eletrônicos está trabalhando em uma geladeira que cria uma lista de compras
@@ -49,33 +49,33 @@ Você também pode instalar Solidity via nmp/Node.js pela linha de comando:
 ### 3. Criando um Contrato Inteligente
 
 Abra o compilador e digite o código:
-    ```
-    pragma solidity ^0.4.0;
+```
+pragma solidity ^0.4.0;
+
+contract OlaMundoContrato {
+    string palavra = "Olá, Mundo";
+    uint valor;
     
-    contract OlaMundoContrato {
-        string palavra = "Olá, Mundo";
-        uint valor;
-        
-        event Imprime(string out);
-        function() { Imprime(palavra); }
-        
-        function setPalavra(string novaPalavra) {
-            palavra = novaPalavra;
-        }
-        
-        function getPalavra() returns (string) {
-            return palavra;
-        }
-        
-        function setValor(uint x) {
-            valor = x;
-        }
+    event Imprime(string out);
+    function() { Imprime(palavra); }
     
-        function getValor() constant returns (uint) {
-            return valor;
-        }
+    function setPalavra(string novaPalavra) {
+        palavra = novaPalavra;
     }
-    ```
+    
+    function getPalavra() returns (string) {
+        return palavra;
+    }
+    
+    function setValor(uint x) {
+        valor = x;
+    }
+
+    function getValor() constant returns (uint) {
+        return valor;
+    }
+}
+```
     
 A primeira coisa que fazemos é definir a versão da linguagem usada, para isso é usada a palavra 'pragma', pragmas
 são instruções dadas ao compilador para que ele saiba como tratar o código.
