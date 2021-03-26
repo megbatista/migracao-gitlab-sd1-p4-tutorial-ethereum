@@ -1,4 +1,4 @@
-# Projeto 4 - Tutorial tecnologia P2P Ethereum
+# Tutorial tecnologia P2P Ethereum
 
 * Meg Batista Alves - megbatistaalves@gmail.com - Desenvolvedor/Documentador
 
